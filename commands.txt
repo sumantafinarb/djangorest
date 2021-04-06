@@ -1,0 +1,23 @@
+ 1473  docker build .
+ 1474  docker-compose build
+ 1475  docker-compose run app sh -c "django-admin.py startproject app ."
+ 1476  chown -R $(whoami):$(whoami) app/
+ 1477  export UID=${UID} && export GID=${GID}
+ 1478  docker-compose run app sh -c "django-admin.py startproject app ."
+ 1479  chmod -R 777 app/
+ 1480  docker-compose run app sh -c "django-admin.py startproject app ."
+ 1481  git init
+ 1482  git commit -m "-Django setup done"
+ 1483  git add .
+ 1484  git commit -m "-Django setup done"
+ 1485  rm -rf .git/
+ 1486  git init
+ 1487  git remote add origin https://github.com/sumantafinarb/djangorest.git
+ 1488  git pull origin main
+ 1489  git add .
+ 1490  git commit -m "-Django starter"
+ 1491  git push origin main
+ 1492  git status
+ 1493  git push origin master
+ 1494  git branch
+ 1495  history
