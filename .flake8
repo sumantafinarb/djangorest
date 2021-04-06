@@ -1,5 +1,0 @@
-[flake8]
-exclude =
-    migrations
-    ./app/manage.py,
-    ./app/settings.py
